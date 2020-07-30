@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-content: 95%;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #393c43;
+  width: 100%;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.main-content {
+  width: var(--main-content);
+}
+
+nav.nav-bar {
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+  background-color: #393c43;
+}
+
+.nav-content {
+  display: flex;
+  width: var(--main-content);
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.nav-bar.active {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.nav-icon {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.nav-link {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.main h1 {
+  font-size: 3rem;
+}
+
+.main p {
+  color: #bbbbbb;
+  font-size: 1.3rem;
+}
+
+.main .btn-container {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.main-btn {
+  position: absolute;
+  margin-left: 15px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+.commands {
+  padding-bottom: 20px;
+  padding-top: 65px;
+}
+
+.commands-table {
+  width: 100%;
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #bbbbbb;
+  border-collapse: collapse;
+}
+
+.commands-table th {
+  background-color: #bbbbbb;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
+
+.commands-table td {
+  padding: 20px;
+  color: white;
+}
+
+.main-btn:nth-child(1) {
+  left: 0%;
+  background-color: #7289da;
+}
+
+.main-btn:nth-child(2) {
+  right: 0%;
+  background-color: black;
+}
+
+@media (hover: hover) {
+  .nav-link:hover {
+    color: white;
+  }
+
+  .main-btn:hover {
+    transform: translateY(-5px);
+  }
+}
